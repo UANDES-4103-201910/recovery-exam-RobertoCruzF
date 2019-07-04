@@ -18,6 +18,17 @@
 
     <ul class="nav navbar-nav navbar-right">
       <% if customer_signed_in? %>
+
+
+
+        <li>
+          <%= link_to root_path do %>
+          <span class="glyphicon glyphicon-home"></span>
+          Home
+          <% end %>
+        </li>
+     
+
         <li>
           <%= link_to destroy_customer_session_path, method: :delete do %>
             <span class="glyphicon glyphicon-log-out"></span>
@@ -29,6 +40,8 @@
             Shopping Cart
           <% end %>
         </li>
+
+
       <% end %>
     </ul>
 
