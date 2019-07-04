@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Recovery</title>
+    <title>Exam2019</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,7 +9,43 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<nav class="navbar navbar-default" style="background-color: #067900;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#" style="color: #fff;">Z-Mobile</a>
+    </div>
+
+    <ul class="nav navbar-nav navbar-right">
+      <% if customer_signed_in? %>
+        <li>
+          <%= link_to destroy_customer_session_path, method: :delete do %>
+            <span class="glyphicon glyphicon-log-out"></span>
+            Log Out
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+      <% if !customer_signed_in? %>
+        <li>
+          <%= link_to new_customer_session_path do%>
+            <span class="glyphicon glyphicon-log-in"></span>
+            Sign In
+          <% end %>
+        </li>
+        <li>
+          <%= link_to new_customer_registration_path do %>
+            <span class="glyphicon glyphicon-customer"></span>
+            Sign Up
+            <% end %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</nav>
+<%= yield %>
+</body>
+
 </html>
