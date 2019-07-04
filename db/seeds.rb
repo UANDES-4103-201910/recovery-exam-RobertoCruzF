@@ -26,3 +26,5 @@ recipes = Recipe.create([{ name: 'Pollo BBQ', price: 10690 },
                          { name: 'Favorita de Joe', price: 11490 },
                          { name: 'Pepperoni', price: 9090 },
                          { name: 'Vegetariana', price: 10690 }])
+
+
