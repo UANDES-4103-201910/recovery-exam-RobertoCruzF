@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  get 'shopping_cart/index'
   devise_for :customers
   resources :customers
   resources :pizzas

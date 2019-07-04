@@ -24,6 +24,11 @@
             Log Out
           <% end %>
         </li>
+        <li>
+          <%= link_to shopping_cart_index_path do%>
+            Shopping Cart
+          <% end %>
+        </li>
       <% end %>
     </ul>
 
@@ -41,9 +46,13 @@
             Sign Up
             <% end %>
         </li>
+
+
+
       <% end %>
     </ul>
   </div>
+
 </nav>
 <%= yield %>
 </body>
