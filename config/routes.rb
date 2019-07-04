@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
  
+  get 'delivery_info/index'
   get 'shopping_cart/index'
   devise_for :customers
   resources :customers

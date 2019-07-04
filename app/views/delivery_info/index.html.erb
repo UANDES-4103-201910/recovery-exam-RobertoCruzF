@@ -1,0 +1,21 @@
+<h1>Delivery Information</h1>
+
+
+</div>
+
+  <% if customer_signed_in? %>
+
+    <div class="container">
+        <div class="field">
+          <strong>Name:</strong>
+          <%= current_customer.name %>
+        </div>
+
+        <div class="field">
+          <strong>Email:</strong>
+          <%= current_customer.email %>
+        </div>
+
+    </div>
+  <% end %>
+</div>
